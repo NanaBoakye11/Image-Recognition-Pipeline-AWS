@@ -1,6 +1,6 @@
 # Image-Recognition-Pipeline AWS
 
-You have to build am image recognition pipeline in AWS, using two EC2 instances, S3, SQS, and Rekognition. The assignment must be done in Java on Amazon Linux VMs. For the rest of the description, you should refer to the figure below:
+You have to build am image recognition pipeline in AWS, using two EC2 instances, S3, SQS, and Rekognition. The assignment must be done on Amazon Linux VMs. For the rest of the description, you should refer to the figure below:
 
 **Goal**: The purpose of this individual assignment is to learn how to use the Amazon AWS cloud platform and how to develop an AWS application that uses existing cloud services. Specifically, you will learn:
 1. How to create VMs (EC2 instances) in the cloud.
