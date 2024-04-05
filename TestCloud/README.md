@@ -71,7 +71,7 @@ Your have to create 2 EC2 instances (EC2 A and B in the figure), with Amazon Lin
         > Use the following command to run both node.js application on EC2 instances `node <filename.js>`
         > Once the AWS recognition detects the images that meets the condition, it sends the files to the SQS for proccessing. Once files are inserted in the queue, ServerB reads from the queue for text detection process until itreceives signal from Server A for last process. 
         
- ![Two EC2 for Parellel Processing](https://njit-bucket-image.s3.us-east-1.amazonaws.com/Screenshot%202023-10-29%20at%208.24.45%E2%80%AFPM.png? "Two EC2 for Parellel Processing")
+ ![Two EC2 for Parellel Processing](https://njit-bucket-image.s3.us-east-1.amazonaws.com/Screenshot%202023-10-29%20at%208.24.45%E2%80%AFPM.png?)
 
 ![Server A & B for Parellel Communication](https://njit-bucket-image.s3.amazonaws.com/Screenshot+2023-10-29+at+8.52.17%E2%80%AFPM.png "Server A & B for Parellel Communication")
 
