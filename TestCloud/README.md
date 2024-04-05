@@ -15,11 +15,7 @@ Your have to create 2 EC2 instances (EC2 A and B in the figure), with Amazon Lin
 
 
 # Step 1
-
-1. Login into AWS Vocareum portal to access Learner Lab. 
-2. Click the 'Start Lab' button to spin up the AWS lab environment. Once the 'AWS' button go from red to green, the lab is ready for launch. 
-3. Click 'AWS' to launch the AWS Mangement Console
-4. Click 'AWS Details' to copy the access_key, secret_key, and session_token and paste it into your ~/.aws/credentials path. 
+ 
 
 ## Create two EC2 instances: 
 
@@ -31,7 +27,7 @@ Your have to create 2 EC2 instances (EC2 A and B in the figure), with Amazon Lin
 6. Leave the remaining settings as default
 7. Select '2' as number of instances to create. (You can rename both instances after creation).
 
-![Project flow diagram](https://njit-bucket-image.s3.us-east-1.amazonaws.com/Screenshot%202023-10-29%20at%207.26.35%E2%80%AFPM.png?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEGMaCXVzLWVhc3QtMSJIMEYCIQDglzhV%2FGfoVzHIZvFPD6xXaO4Fmu8xQR6UgvK5vvC3MwIhANOkqSes2PeCo9p%2FofRo%2FBQP4djEqsv7TYdARLuPCfXnKogDCMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMMjMwNzYzMDcwNjE3Igy7uh0RJ1ESuj8MSCkq3AJGbcIIQ3pvHZDLtbYEz%2BcHRxonp17dVtKjraPygcTHJQSpAAUh5LvB1WAVVPiv7IV7UZWobajX8FPRrLEySbNi0po1Q5b%2BjtklHA2I3Fd5phRWb5HRzP0g%2B5BBipMQj2mD%2BWqaHuvm358WH4TQowTmwzjaihaOppyDivLIrXMwM45lK4RobTfOgb0HC%2BYb%2BXizpCukkRG4l3OaL0GPdPBw3tUx6AU8KBNw098cziUYf%2F9OPO5I51pqkfJ0HMonJk5h6qx2O9%2F4gzi%2FwvSPgoBG8xloAnWkTYzGdZwwqI%2F3T1C%2FWJXNKg2aF4pq3wqgFGP8trn%2BvM33FQT7qAML39P5DsLngGGxIKkW9iugTz7HlZDN%2BQq1J6nLgzq6%2B%2BkXHV1Q%2BrSi%2F6piWpVmWtSMiDU7BnEK61RxvOQ1Eo8UJra%2Fp29bxlqJRQY9ISF23y07kVzDfhPUhPxa9HgkU08w%2FZbPqwY6sgJxrm%2FRyYc%2BbtEdRAJrC34JYxrWegRMX4c58KQrQspKZL%2Fgfk4h3%2F865WS0cai5363NEuTu2F9vR45%2BhKo8y7mf%2F833pOrOPVjfA85oGU0fjLiGUkEjaZw2b5Z1PqzP5gT%2FauRawltuY9XSfYbW6LYkeHsDFk5X9dlpH6NGzYaxOIQ9%2BN8te%2FvmeAuJaCkltX3oMID31QPsf6SKiQkveBjsgl9b%2BSSmK08UJ6mhrdXzGsls4x7VV8AapDid4egvsrDGPBTIMalkatmbDcEyOQmG61O%2FBsvSyAHoTSi7X9ix2EX71yHVY7HY49Ku7QXEkAv2msUGxa2dIQW9MWRdbMT5bRAUtBQSJDRsdaxzKbB%2Buve4Apkqc2SUoUYa9ITEKSbekLKqM5k7rHnp54OKJKT1P%2BA%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20231209T025142Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIATLOUNASMRAUVEHK5%2F20231209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=260f870a0382b22901762e12dbaabe09debee00bbcc548ebac72dc49a62ebc6c)
+![Project flow diagram](https://njit-bucket-image.s3.us-east-1.amazonaws.com/Screenshot%202023-10-29%20at%207.26.35%E2%80%AFPM.png? "Project Flow Diagram")
 
 ## Create an SQS: 
 
@@ -75,7 +71,7 @@ Your have to create 2 EC2 instances (EC2 A and B in the figure), with Amazon Lin
         > Use the following command to run both node.js application on EC2 instances `node <filename.js>`
         > Once the AWS recognition detects the images that meets the condition, it sends the files to the SQS for proccessing. Once files are inserted in the queue, ServerB reads from the queue for text detection process until itreceives signal from Server A for last process. 
         
- ![Two EC2 for Parellel Processing](https://njit-bucket-image.s3.us-east-1.amazonaws.com/Screenshot%202023-10-29%20at%208.24.45%E2%80%AFPM.png?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEGMaCXVzLWVhc3QtMSJIMEYCIQDglzhV%2FGfoVzHIZvFPD6xXaO4Fmu8xQR6UgvK5vvC3MwIhANOkqSes2PeCo9p%2FofRo%2FBQP4djEqsv7TYdARLuPCfXnKogDCMv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQARoMMjMwNzYzMDcwNjE3Igy7uh0RJ1ESuj8MSCkq3AJGbcIIQ3pvHZDLtbYEz%2BcHRxonp17dVtKjraPygcTHJQSpAAUh5LvB1WAVVPiv7IV7UZWobajX8FPRrLEySbNi0po1Q5b%2BjtklHA2I3Fd5phRWb5HRzP0g%2B5BBipMQj2mD%2BWqaHuvm358WH4TQowTmwzjaihaOppyDivLIrXMwM45lK4RobTfOgb0HC%2BYb%2BXizpCukkRG4l3OaL0GPdPBw3tUx6AU8KBNw098cziUYf%2F9OPO5I51pqkfJ0HMonJk5h6qx2O9%2F4gzi%2FwvSPgoBG8xloAnWkTYzGdZwwqI%2F3T1C%2FWJXNKg2aF4pq3wqgFGP8trn%2BvM33FQT7qAML39P5DsLngGGxIKkW9iugTz7HlZDN%2BQq1J6nLgzq6%2B%2BkXHV1Q%2BrSi%2F6piWpVmWtSMiDU7BnEK61RxvOQ1Eo8UJra%2Fp29bxlqJRQY9ISF23y07kVzDfhPUhPxa9HgkU08w%2FZbPqwY6sgJxrm%2FRyYc%2BbtEdRAJrC34JYxrWegRMX4c58KQrQspKZL%2Fgfk4h3%2F865WS0cai5363NEuTu2F9vR45%2BhKo8y7mf%2F833pOrOPVjfA85oGU0fjLiGUkEjaZw2b5Z1PqzP5gT%2FauRawltuY9XSfYbW6LYkeHsDFk5X9dlpH6NGzYaxOIQ9%2BN8te%2FvmeAuJaCkltX3oMID31QPsf6SKiQkveBjsgl9b%2BSSmK08UJ6mhrdXzGsls4x7VV8AapDid4egvsrDGPBTIMalkatmbDcEyOQmG61O%2FBsvSyAHoTSi7X9ix2EX71yHVY7HY49Ku7QXEkAv2msUGxa2dIQW9MWRdbMT5bRAUtBQSJDRsdaxzKbB%2Buve4Apkqc2SUoUYa9ITEKSbekLKqM5k7rHnp54OKJKT1P%2BA%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20231209T025327Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIATLOUNASMRAUVEHK5%2F20231209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=f45d7bf9efa1fdee96581b071df081ef5203b38a283539a5961e6e86e2301105)
+ ![Two EC2 for Parellel Processing](https://njit-bucket-image.s3.us-east-1.amazonaws.com/Screenshot%202023-10-29%20at%208.24.45%E2%80%AFPM.png? "Two EC2 for Parellel Processing")
 
 ![Server A & B for Parellel Communication](https://njit-bucket-image.s3.amazonaws.com/Screenshot+2023-10-29+at+8.52.17%E2%80%AFPM.png "Server A & B for Parellel Communication")
 
